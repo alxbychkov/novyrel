@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novyrel</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #e0f2e9;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #4caf50;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+        .hero {
+            background-color: #fff;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .hero img {
+            max-width: 100%;
+            height: auto;
+        }
+        .hero h1 {
+            font-size: 60px;
+            color: #4caf50;
+            margin: 20px 0;
+        }
+        .hero .subtitle {
+            background-color: #e0f2e9;
+            padding: 20px;
+            font-size: 24px;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+        .hero p {
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        .btn {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .section {
+            padding: 50px 20px;
+        }
+        .client-service {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .client-service .text {
+            width: 50%;
+        }
+        .client-service .image {
+            width: 45%;
+        }
+        .client-service .image img {
+            max-width: 100%;
+        }
+        .client-service ol {
+            list-style-type: decimal;
+            padding-left: 20px;
+        }
+        .reliable-partner {
+            text-align: center;
+            background-color: #fff;
+        }
+        .reliable-partner h2 {
+            color: #4caf50;
+        }
+        .supplied-products {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f9f9f9;
+        }
+        .supplied-products .image {
+            width: 45%;
+        }
+        .supplied-products .image img {
+            max-width: 100%;
+        }
+        .supplied-products .text {
+            width: 50%;
+        }
+        .philosophy-mission {
+            display: flex;
+            justify-content: space-between;
+        }
+        .philosophy-mission .box {
+            width: 48%;
+            background-color: #e0f2e9;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .contacts-section {
+            text-align: center;
+        }
+        .contacts-section .btn {
+            margin-top: 20px;
+        }
+        footer {
+            background-color: #e0f2e9;
+            padding: 50px 20px;
+            text-align: center;
+            position: relative;
+        }
+        .footer-logo {
+            font-size: 100px;
+            color: rgba(76, 175, 80, 0.2);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .footer-content {
+            position: relative;
+            z-index: 1;
+        }
+        .company-info {
+            margin-bottom: 20px;
+        }
+        footer nav {
+            margin-top: 20px;
+        }
+        .wave {
+            width: 100%;
+            height: 50px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23e0f2e9" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Novyrel</div>
+        <nav>
+            <ul>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Качество</a></li>
+                <li><a href="#">Продукция</a></li>
+                <li><a href="#">Контакты</a></li>
+                <li><a href="#">Ru / Eng</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <img src="vials.jpg" alt="Row of pharmaceutical vials"> <!-- Placeholder for vials image -->
+        <h1>Novyrel</h1>
+        <div class="subtitle">
+            Специализированная компания по оптовым поставкам 
+            фармацевтической продукции, обеспечивающая доставку 
+            лекарственных средств и медицинских изделий в аптеки
+            и дистрибьюторские сети по всей России и странам СНГ
+        </div>
+        <p>
+            Мы поставляем препараты в области офтальмологии, гастроэнтерологии, 
+            онкологии, ревматологии, нефрологии, гемофилии и неврологии.
+        </p>
+        <a href="#" class="btn">Контакты</a>
+    </section>
+
+    <section class="section client-service">
+        <div class="text">
+            <h2>Клиентский сервис</h2>
+            <ol>
+                <li>Каждому клиенту назначается персональный менеджер, 
+                который оперативно решает рабочие вопросы и помогает 
+                выстроить бесперебойный процесс закупок. Такой формат 
+                сотрудничества формирует доверие и способствует 
+                устойчивым, долгосрочным партнёрским отношениям.</li>
+                <li>Сотрудничество только с проверенными производителями
+                и поставщиками позволяет обеспечить оперативную
+                и надёжную доставку необходимых лекарственных 
+                препаратов.</li>
+                <li>Клиенты по всей России и в странах СНГ ценят нашу 
+                надёжность, оперативность и удобство взаимодействия. 
+                Мы формируем целевой ассортимент фармацевтической 
+                продукции, востребованной именно в специализированных 
+                областях медицины.</li>
+                <li>Вместо обширного каталога мы обеспечиваем поставки тех 
+                препаратов, которые действительно необходимы для 
+                определённых терапевтических областей и обладают высокой 
+                клинической значимостью.</li>
+            </ol>
+        </div>
+        <div class="image">
+            <img src="people.jpg" alt="Customer service team"> <!-- Placeholder for people image -->
+        </div>
+    </section>
+
+    <section class="section reliable-partner">
+        <h2>Надежный партнер в вопросах обеспечения безопасности и качества продукции</h2>
+        <p>Компания имеет действующую лицензию на фармацевтическую деятельность, выданную Росздравнадзором. 
+        По запросу мы направим подтверждающий сертификат.</p>
+        <a href="#" class="btn">Контакты</a>
+    </section>
+
+    <section class="section supplied-products">
+        <div class="image">
+            <img src="pills.jpg" alt="Pharmaceutical pills"> <!-- Placeholder for pills image -->
+        </div>
+        <div class="text">
+            <h2>Поставляемая продукция</h2>
+            <p>Ассортимент поставляемой продукции включает:</p>
+            <ul>
+                <li>зарегистрированные лекарственные препараты;</li>
+                <li>импортные незарегистрированные лекарственные 
+                средства, поставляемые в Россию и страны СНГ по 
+                жизненным показаниям для конкретных пациентов;</li>
+                <li>витамины, биологически активные добавки и другие 
+                пищевые добавки;</li>
+                <li>а также иные позиции, доступные по запросу.</li>
+            </ul>
+            <p>Помимо конкурентоспособных и прозрачных цен, одним 
+            из ключевых преимуществ Новирел является постоянная 
+            доступность необходимой продукции.</p>
+        </div>
+    </section>
+
+    <section class="section philosophy-mission">
+        <div class="box">
+            <h3>Наша философия</h3>
+            <p>В Новирел мы ежедневно работаем с полной отдачей, 
+            стремясь обеспечить максимальное удовлетворение 
+            потребностей наших клиентов.</p>
+            <p>Наша философия основана на честности, стремлении 
+            к инновациям и ориентации на результат.</p>
+            <p>Мы уверены: лучший показатель нашей работы — это 
+            доверие и комфорт наших партнёров, формирующие 
+            прочные и долгосрочные отношения.</p>
+        </div>
+        <div class="box">
+            <h3>Наша миссия</h3>
+            <p>Наша миссия — упрощать путь лекарственных 
+            препаратов от производителя до пациента, 
+            предоставляя медицинскому сообществу эффективные 
+            решения, основанные на прозрачности, качестве
+            и ответственном подходе.</p>
+        </div>
+    </section>
+
+    <section class="section contacts-section">
+        <h2>Контакты</h2>
+        <p>Свяжитесь с нами, чтобы обсудить, как мы 
+        можем помочь вам получать нужные лекарства.</p>
+        <p>+7 (111) 111-11-11</p>
+        <p>office@novyrel.ru</p>
+        <a href="#" class="btn">Контакты</a>
+    </section>
+
+    <div class="wave"></div>
+
+    <footer>
+        <div class="footer-logo">Novyrel</div>
+        <div class="footer-content">
+            <div class="company-info">
+                <p>ООО “Новирел”</p>
+                <p>ИНН 7733477245</p>
+                <p>ОГРН 1257700483380</p>
+            </div>
+            <p>Все права защищены</p>
+            <nav>
+                <ul>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Качество</a></li>
+                    <li><a href="#">Продукция</a></li>
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#">Ru / Eng</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+</body>
+</html>

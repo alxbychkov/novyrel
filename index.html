@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Novyrel — специализированные оптовые поставки фармацевтической продукции</title>
+  <meta name="description" content="Оптовые поставки лекарственных средств и медизделий в аптеки и дистрибьюторские сети по всей России и странам СНГ.">
+  <!-- todo: заменить на фирменные шрифты из макета -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      /* todo: заменить на брендовые цвета */
+      --bg: #FFFFFF;
+      --text: #0F172A;
+      --muted: #64748B;
+      --border: #E5E7EB;
+      --surface: #F8FAFC;
+      --accent: #2563EB;
+      --accent-2: #0EA5E9;
+      --container: 1200px;
+      --radius: 12px;
+      --gap: 24px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:"Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      color:var(--text); background:var(--bg); line-height:1.6;
+    }
+    img{max-width:100%; height:auto; display:block}
+    a{color:inherit}
+    .container{max-width:var(--container); margin:0 auto; padding:0 24px}
+
+    /* Header */
+    header{
+      position:sticky; top:0; background:#fff; border-bottom:1px solid var(--border); z-index:50;
+    }
+    .header-inner{
+      min-height:72px; display:flex; align-items:center; justify-content:space-between; gap:16px;
+    }
+    .brand{display:flex; align-items:center; gap:12px; font-weight:700}
+    .brand img{width:28px; height:28px}
+    nav ul{display:flex; gap:20px; list-style:none; margin:0; padding:0}
+    nav a{display:inline-block; padding:8px 12px; text-decoration:none; border-radius:8px}
+    nav a:hover{background:#F1F5F9}
+    .header-cta{display:flex; gap:12px}
+    .btn{
+      display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border-radius:10px;
+      font-weight:600; border:none; cursor:pointer;
+    }
+    .btn.primary{background:var(--accent); color:#fff}
+    .btn.secondary{background:#EEF2FF; color:#1E3A8A}
+
+    /* Hero */
+    .hero{padding:64px 0; display:grid; grid-template-columns:1.1fr 0.9fr; gap:32px; align-items:center}
+    .eyebrow{font-weight:600; color:var(--accent-2); letter-spacing:.02em; text-transform:uppercase; font-size:12px}
+    h1{margin:8px 0 16px; font-size:clamp(28px, 4.5vw, 44px); line-height:1.2}
+    .lead{color:var(--muted); font-size:clamp(16px, 2vw, 18px)}
+
+    /* Sections */
+    section.section{padding:56px 0; border-top:1px solid var(--border)}
+    .section-header{display:flex; justify-content:space-between; align-items:flex-end; gap:16px; margin-bottom:24px}
+    .section h2{margin:0; font-size:clamp(22px, 3.6vw, 32px)}
+    .section p{color:var(--muted)}
+    .grid-2{display:grid; grid-template-columns:1fr 1fr; gap:var(--gap)}
+    .grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:var(--gap)}
+    .grid-4{display:grid; grid-template-columns:repeat(4,1fr); gap:var(--gap)}
+    .card{
+      border:1px solid var(--border); border-radius:var(--radius); padding:20px; background:#fff;
+    }
+    .kpi{display:flex; align-items:flex-start; gap:16px}
+    .kpi .num{
+      width:36px; height:36px; border-radius:8px; background:var(--surface); display:grid; place-items:center; font-weight:700; color:#334155;
+    }
+
+    /* Feature banner */
+    .feature{
+      background:linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%);
+      border:1px solid var(--border); border-radius:var(--radius);
+      padding:24px; display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:center;
+    }
+    .feature h3{margin:0 0 8px; font-size:22px}
+    .feature p{margin:0}
+
+    /* List with bullets */
+    .bullets{display:grid; gap:12px}
+    .bullets li{list-style:"• "; padding-left:6px}
+
+    /* Contact block */
+    .contact-block{
+      border:1px dashed var(--border); border-radius:var(--radius);
+      padding:20px; display:flex; flex-wrap:wrap; gap:12px; align-items:center
+    }
+    .contact-item{display:flex; align-items:center; gap:10px; padding:8px 12px; border:1px solid var(--border); border-radius:10px}
+    .contact-item .icon{width:18px; height:18px; border-radius:4px; background:#E2E8F0}
+
+    /* Footer */
+    footer{background:var(--surface); border-top:1px solid var(--border); margin-top:56px}
+    .footer-inner{padding:40px 0; display:grid; grid-template-columns:2fr 1fr 1fr; gap:24px}
+    .footer-title{font-weight:700; margin-bottom:8px}
+    .footer-nav{list-style:none; padding:0; margin:0; display:grid; gap:8px}
+    .legal{border-top:1px solid var(--border); padding:16px 0; color:var(--muted); font-size:14px; text-align:center}
+
+    /* Responsive */
+    @media (max-width: 1024px){
+      .hero{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:1fr 1fr}
+      .grid-4{grid-template-columns:1fr 1fr}
+      .feature{grid-template-columns:1fr}
+      .footer-inner{grid-template-columns:1fr}
+      nav ul{gap:12px}
+      .header-inner{min-height:64px}
+    }
+    @media (max-width: 640px){
+      .grid-2,.grid-3,.grid-4{grid-template-columns:1fr}
+      .header-inner{min-height:56px}
+      .contact-block{flex-direction:column; align-items:flex-start}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-inner">
+      <div class="brand">
+        <!-- todo: заменить на SVG логотип -->
+        <img src="logo.svg" alt="Novyrel">
+        <span>Novyrel</span>
+      </div>
+      <nav aria-label="Основная навигация">
+        <ul>
+          <li><a href="#quality">Качество</a></li>
+          <li><a href="#products">Продукция</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="header-cta">
+        <a class="btn secondary" href="#contacts">Связаться</a>
+        <a class="btn primary" href="#contacts">КОНТАКТЫ</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="container hero">
+      <div>
+        <div class="eyebrow">Novyrel</div>
+        <h1>Специализированная компания по оптовым поставкам фармацевтической продукции</h1>
+        <p class="lead">Обеспечиваем доставку лекарственных средств и медицинских изделий в аптеки и дистрибьюторские сети по всей России и странам СНГ.</p>
+        <p class="lead">Мы работаем с продукцией в области офтальмологии, гастроэнтерологии, онкологии, ревматологии, нефрологии, гемофилии и неврологии.</p>
+        <div style="display:flex; gap:12px; margin-top:16px">
+          <a class="btn primary" href="#contacts">КОНТАКТЫ</a>
+          <a class="btn secondary" href="#products">Продукция</a>
+        </div>
+      </div>
+      <div>
+        <!-- todo: добавить иллюстрацию из макета -->
+        <img src="hero.jpg" alt="Novyrel — фармацевтические поставки" style="border-radius:12px">
+      </div>
+    </section>
+
+    <!-- Клиентский сервис -->
+    <section class="section" id="service">
+      <div class="container">
+        <div class="section-header">
+          <h2>Клиентский сервис</h2>
+        </div>
+
+        <div class="grid-2">
+          <div class="card kpi">
+            <div class="num">1</div>
+            <div>
+              <p>Мы формируем целевой ассортимент фармацевтической продукции, востребованной именно в специализированных областях медицины.</p>
+              <p>Вместо обширного каталога мы обеспечиваем поставку тех препаратов, которые действительно необходимы для определённых терапевтических областей и обладают высокой клинической значимостью.</p>
+              <!-- note: в PDF есть артефакты строки; текст приведён в нормальный вид -->
+            </div>
+          </div>
+
+          <div class="card kpi">
+            <div class="num">2</div>
+            <div>
+              <p>Сотрудничество только с проверенными производителями и поставщиками позволяет обеспечить оперативную и надёжную доставку необходимых лекарственных средств.</p>
+              <!-- note: OCR-артефакты (mperuparam) исправлены на «лекарственных средств» -->
+            </div>
+          </div>
+
+          <div class="card kpi">
+            <div class="num">3</div>
+            <div>
+              <p>Каждому клиенту назначается персональный менеджер, который оперативно решает рабочие вопросы и помогает. Доверительные отношения способствуют устойчивому, долгосрочному партнёрству.</p>
+              <!-- note: блок с артефактами исправлен по смыслу -->
+            </div>
+          </div>
+
+          <div class="card kpi">
+            <div class="num">4</div>
+            <div>
+              <p>Клиенты по всей России и в странах СНГ ценят нашу надёжность, оперативность и удобство взаимодействия.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Качество и безопасность -->
+    <section class="section" id="quality">
+      <div class="container">
+
+        <div class="feature" style="margin-bottom:24px">
+          <div>
+            <h3>Надёжный партнёр в вопросах обеспечения безопасности и качества продукции</h3>
+            <p>Гарантированное качество.</p>
+          </div>
+          <div>
+            <!-- todo: декоративный баннер/иконографика из макета -->
+            <img src="quality.jpg" alt="Качество и безопасность" style="border-radius:12px">
+          </div>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <h3>Стабильность поставок</h3>
+            <p>Для нас приоритетом являются безопасность и сохранность продукции на логистическом пути. Процесс поставки контролируется нашими специалистами до её передачи клиенту.</p>
+            <!-- note: блок с «коринтирует» и «жем» нормализован -->
+          </div>
+
+          <div class="card">
+            <h3>Проверенные производители</h3>
+            <p>Мы работаем только с проверенными производителями и соблюдаем строгие стандарты контроля.</p>
+            <!-- note: OCR-артефакты очищены -->
+          </div>
+
+          <div class="card">
+            <h3>Честные условия</h3>
+            <p>Мы придерживаемся прозрачных и уважительных условий работы, обеспечивая партнёрам высокий уровень обслуживания.</p>
+          </div>
+        </div>
+
+        <div class="contact-block" style="margin-top:24px">
+          <span>Свяжитесь с нами, чтобы обсудить, как мы можем помочь вам получить нужные лекарственные средства.</span>
+          <a class="btn primary" href="#contacts">КОНТАКТЫ</a>
+        </div>
+
+        <p style="margin-top:16px; color:#334155; font-size:14px">
+          Компании имеют действующую лицензию на фармацевтическую деятельность, выданную Роспотребнадзором. По запросу мы направим подтверждающий сертификат.
+          <!-- note: в PDF «Роспоринадзор» — приведено к «Роспотребнадзор»; уточните, если нужен иной орган -->
+        </p>
+      </div>
+    </section>
+
+    <!-- Поставляемая продукция -->
+    <section class="section" id="products">
+      <div class="container">
+        <div class="section-header">
+          <h2>Поставляемая продукция</h2>
+          <a class="btn secondary" href="#contacts">КОНТАКТЫ</a>
+        </div>
+
+        <div class="feature" style="margin-bottom:24px">
+          <div>
+            <h3>Постоянная доступность</h3>
+            <p>Помимо конкурентных и прозрачных цен, одно из ключевых преимуществ Novyrel — постоянная доступность необходимой продукции.</p>
+            <!-- note: исправлены артефакты «конкурентволнобных», «армм» -->
+          </div>
+          <div>
+            <img src="products.jpg" alt="Ассортимент продукции" style="border-radius:12px">
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Ассортимент включает:</h3>
+          <ul class="bullets">
+            <li>зарегистрированные лекарственные препараты;</li>
+            <li>импортные незарегистрированные лекарственные средства, поставленные в Россию и страны СНГ по жизненным показаниям для конкретных пациентов;</li>
+            <li>витамины, биологически активные добавки и другие пищевые добавки;</li>
+            <li>а также иные позиции, доступные по запросу.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Наша философия -->
+    <section class="section" id="philosophy">
+      <div class="container">
+        <h2>Наша философия</h2>
+        <div class="grid-2" style="margin-top:16px">
+          <div class="card">
+            <p>Мы работаем с полной отдачей, стремясь обеспечить максимальное удовлетворение потребностей наших клиентов.</p>
+            <p>Наша философия основана на честности, стремлении к инновациям и ориентации на результат.</p>
+            <p>Мы уверены: лучший показатель нашей работы — доверие и комфорт наших партнёров, формирующие прочные и долгосрочные отношения.</p>
+            <!-- note: исправлены артефакты «Нови дет ны́х конконешно» -->
+          </div>
+
+          <div class="card">
+            <h3>Наша миссия</h3>
+            <p>Наша миссия — упрощать путь лекарственных препаратов от производителя до пациента, предоставляя медицинскому сообществу эффективные решения, основанные на прозрачности, качестве и ответственном подходе.</p>
+            <div style="margin-top:12px">
+              <a class="btn secondary" href="#contacts">КОНТАКТЫ</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Контакты -->
+    <section class="section" id="contacts" aria-labelledby="contacts-title">
+      <div class="container">
+        <h2 id="contacts-title">Контакты</h2>
+
+        <div class="contact-block" style="margin-top:16px">
+          <div class="contact-item" aria-label="Телефон">
+            <div class="icon" aria-hidden="true"></div>
+            <span>+7 (111) 111-11-11</span>
+          </div>
+          <div class="contact-item" aria-label="Email">
+            <div class="icon" aria-hidden="true"></div>
+            <span>office@novyrel.ru</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-inner">
+      <div>
+        <div class="footer-title">Novyrel</div>
+        <p>ООО «Новира»<br>ИНН 773347245<br>ОГРН 1267700491300</p>
+      </div>
+      <div>
+        <div class="footer-title">Навигация</div>
+        <ul class="footer-nav">
+          <li><a href="#quality">Качество</a></li>
+          <li><a href="#products">Продукция</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-title">Связь</div>
+        <ul class="footer-nav">
+          <li><a href="tel:+71111111111">+7 (111) 111-11-11</a></li>
+          <li><a href="mailto:office@novyrel.ru">office@novyrel.ru</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">Все права защищены</div>
+  </footer>
+
+</body>
+</html>
