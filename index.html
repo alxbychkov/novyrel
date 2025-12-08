@@ -39,7 +39,11 @@
             <div class="service__item">
               <span class="service__number">{{#if @first}}1{{else}}{{#if (eq @index 1)}}2{{else}}{{#if (eq @index
                 2)}}3{{else}}4{{/if}}{{/if}}{{/if}}</span>
-              <p class="service__text">{{#if this.heading}}<strong>{{this.heading}}</strong> {{/if}}{{this.text}}</p>
+              <p class="service__text">
+                {{#if this.heading}}<strong>{{this.heading}}</strong> {{/if}}
+                {{#if this.paragraph}}<span>{{this.paragraph}}</span> {{/if}}
+                {{this.text}}
+              </p>
             </div>
             {{/each}}
           </div>

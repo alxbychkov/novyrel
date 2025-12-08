@@ -49,6 +49,10 @@
   font-weight: 600;
 }
 
+.service__text span {
+  display: block;
+}
+
 .service__image {
   display: flex;
   justify-content: flex-start;
