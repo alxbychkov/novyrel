@@ -27,6 +27,18 @@ document.addEventListener('DOMContentLoaded', function () {
         document.body.style.overflow = '';
       }
     });
+
+    // Close menu when clicking outside (mobile)
+    document.addEventListener('click', function(e) {
+      if (window.innerWidth > 1024) return;
+      const clickInsideNav = nav.contains(e.target);
+      const clickOnBurger = burger.contains(e.target);
+      if (!clickInsideNav && !clickOnBurger && nav.classList.contains('active')) {
+        burger.classList.remove('active');
+        nav.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
   }
 
   const langSelect = document.querySelectorAll('.lang-select');
