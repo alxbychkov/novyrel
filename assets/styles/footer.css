@@ -42,7 +42,8 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 18px;
   line-height: 30px;
-  color: #000;
+  color: #000 !important;
+  text-decoration: none;
 }
 
 .footer__right {

@@ -92,7 +92,7 @@
     "contacts": {
         "title": "Contacts",
         "phone": "+79015761926",
-        "phoneFormatted": "+7 (901) 576-19-26",
+        "phoneFormated": "+7 (901) 576-19-26",
         "email": "office@novyrel.com"
     }
 }

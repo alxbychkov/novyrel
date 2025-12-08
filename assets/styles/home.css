@@ -358,6 +358,10 @@
   .products__image img {
     border-radius: 0;
   }
+  .contact__item {
+    width: 100%;
+    max-width: 275px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -397,8 +401,6 @@
   .quality__card-text {
     font-size: 15px;
   }
-
-
   .products__intro {
     font-size: 15px;
     font-weight: 400;
@@ -438,7 +440,7 @@
     margin-bottom: 10px;
   }
   .section-quality .quality__intro {
-    margin-top: 0;
+    margin-top: 25px;
   }
   .section-contacts {
     padding-top: 0;
@@ -479,9 +481,16 @@
     display: block;
     margin-top: 50px;
   }
+  .contact__item {
+    max-width: 210px;
+  }
 }
 
 @media (max-width: 460px) {
+  .service__image img {
+    opacity: 1;
+  }
+
   .section-service {
     overflow: hidden;
   }
