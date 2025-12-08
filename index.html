@@ -68,7 +68,16 @@
           <p class="quality__card-text">{{this.text}}</p>
           {{#unless this.title}}
 
-          {{> button}}
+          <a href="#contacts" class="btn btn--primary">
+            {{../i18n.buttons.contacts}}
+            <svg class="btn__arrow" width="16" height="17" viewBox="0 0 16 17" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.61914 4.2832L13.6633 8.32733L9.61914 12.3715" stroke-width="2" stroke-miterlimit="10"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M2.33594 8.32812H13.6621" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </a>
 
           {{/unless}}
         </div>
