@@ -1,0 +1,55 @@
+# Включаем mod_rewrite
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# Базовая директория (если сайт в корне, оставляем /)
+RewriteBase /
+
+# Убираем .html из URL
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+#RewriteRule ^(.*)$ $1.html [L]
+RewriteRule ^(.+)\.html$ /$1 [R=301,L]
+
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /.*index\.html\ HTTP/
+RewriteRule ^(.*)index\.html$ /$1 [R=301,L]
+
+# Редирект с www на без www (опционально)
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [L,R=301]
+
+# Редирект на HTTPS (опционально)
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# Кэширование статических файлов
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/webp "access plus 6 months"
+ExpiresByType image/jpeg "access plus 6 months"
+ExpiresByType image/png "access plus 6 months"
+ExpiresByType image/gif "access plus 6 months"
+ExpiresByType image/svg+xml "access plus 6 months"
+ExpiresByType text/css "access plus 1 month"
+ExpiresByType application/javascript "access plus 1 month"
+ExpiresByType application/json "access plus 1 month"
+ExpiresByType font/woff "access plus 1 year"
+ExpiresByType font/woff2 "access plus 1 year"
+ExpiresByType text/html "access plus 1 hour"
+</IfModule>
+
+# Gzip сжатие
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/json
+AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# Защита .htaccess
+<Files .htaccess>
+Require all denied
+</Files>
