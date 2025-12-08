@@ -1,0 +1,507 @@
+/* Service Section */
+.section-service {
+  background: #fff;
+  padding-top: 200px;
+}
+
+.section-service .section__content {
+  align-items: flex-end;
+}
+
+.service__items {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.service__item {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.service__number {
+  font-family: 'Forum', serif;
+  font-size: 49px;
+  line-height: 1.25;
+  color: #b7c2c9;
+  flex-shrink: 0;
+  min-width: 60px;
+  position: relative;
+}
+
+.service__number::before {
+  content: url(../images/figma/service_stroke.webp);
+  position: absolute;
+  top: -45%;
+  right: 10px;
+}
+
+.service__text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 19px;
+  line-height: 1.5;
+  color: #222220;
+  padding-top: 30px;
+}
+
+.service__text strong {
+  font-weight: 600;
+}
+
+.service__image {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.service__image img {
+  opacity: 0.7;
+  width: 190%;
+  height: 100%;
+  display: block;
+  border-radius: 50px 0 0 50px;
+}
+
+/* Quality Section */
+.section-quality {
+  background: #fff;
+  padding: 150px 0;
+  background-image: url(../images/figma/question-stroke.webp);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.section-quality .section__title {
+  max-width: 900px;
+}
+
+.section-quality .btn {
+  align-self: end;
+}
+
+.quality__intro {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 19px;
+  line-height: 1.5;
+  color: #222220;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 130px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.quality__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 45px;
+}
+
+.quality__card {
+  border-radius: 23px;
+  padding: 40px 50px;
+  min-height: 230px;
+  display: flex;
+  flex-direction: column;
+}
+
+.quality__card--green {
+  background: #aed19a;
+}
+
+.quality__card--white {
+  background: #f0f0f0;
+  justify-content: space-between;
+}
+
+.quality__card-title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 23px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #222220;
+  margin-bottom: 20px;
+}
+
+.quality__card-text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 19px;
+  line-height: 1.5;
+  color: #222220;
+}
+
+/* Products Section */
+.section-products {
+  background: #fff;
+  padding: 150px 0 300px;
+  background-image: url(../images/figma/products-stroke.webp);
+  background-position: 50% 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.section-products .btn {
+  float: right;
+}
+
+.section-products .section__right .section__title {
+  display: none;
+}
+
+.products__intro {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 19px;
+  line-height: 1.5;
+  color: #222220;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.products__subtitle {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 19px;
+  line-height: 1.5;
+  color: #222220;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.products__list {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 19px;
+  line-height: 1.5;
+  color: #222220;
+  list-style: disc;
+  padding-left: 30px;
+  margin-bottom: 40px;
+}
+
+.products__list li {
+  margin-bottom: 9px;
+}
+
+.products__image {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.products__image img {
+  width: 200%;
+  height: 100%;
+  display: block;
+  border-radius: 0 50px 50px 0;
+}
+
+/* Mission Section */
+.section-mission {
+  padding: 0;
+  margin-bottom: -200px;
+}
+
+.mission__content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1224px;
+  margin: 0 auto;
+}
+
+.mission__column {
+  max-width: 530px;
+}
+
+.mission__column .section__title {
+  margin-bottom: 26px;
+}
+
+.mission__text,
+.mission__text p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  line-height: 1.67;
+  color: #000;
+}
+
+.mission__text strong {
+  font-weight: 600;
+}
+
+/* Contacts Section */
+.section-contacts {
+  background-image: url(../images/figma/contacts-stroke.webp);
+  background-position: 50% -50px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 500px 0 150px;
+  position: relative;
+}
+
+.contacts__content {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  margin-top: 60px;
+}
+
+.contact__item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact__icon {
+  width: 35px;
+  height: 35px;
+  flex-shrink: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.phone__icon {
+  background-image: url(../images/figma/phone_icon.webp);
+}
+.mail__icon {
+  background-image: url(../images/figma/mail_icon.webp);
+}
+
+.contact__text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 23px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #222220;
+  text-decoration: none;
+}
+
+.contact__text:hover {
+  opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (min-width: 1920px) {
+  .section-contacts {
+    background-position: 50% 100%;
+    padding: 400px 0 150px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .mission__content {
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .quality__grid {
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+
+  .quality__card--white {
+    min-height: unset;
+  }
+
+  .quality__card--white .btn {
+    margin-top: 24px;
+  }
+
+  .quality__intro {
+    margin-top: 45px;
+    font-size: 15px;
+  }
+
+  .contacts__content {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .section__left,
+  .section__right {
+    width: 100%;
+  }
+
+  .products__image img,
+  .service__image img {
+    width: 100%;
+    border-radius: 0;
+  }
+  .section-service {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .section-service .section__content {
+    flex-direction: column-reverse;
+  }
+  .section-service .container {
+    padding: 0;
+  }
+  .section-service .section__left {
+    padding: 0 40px;
+    overflow: hidden;
+  }
+  .section-products .container {
+    padding: 0;
+  }
+  .section-products .container > .section__title {
+    display: none;
+  }
+  .section-products .section__right {
+    padding: 0 40px;
+  }
+  .section-products .section__right .section__title {
+    text-align: start;
+    display: block;
+  }
+  .products__image img {
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .section-quality,
+  .section-products,
+  .section-mission,
+  .section-contacts {
+    padding: 40px 0;
+  }
+
+  .service__items {
+    gap: 50px;
+  }
+  .service__item {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .service__text {
+    font-size: 15px;
+    text-align: center;
+    padding-top: 0;
+  }
+  .service__item:nth-child(2n) .service__number::before {
+    content: url(../images/figma/service_stroke_m.webp);
+    right: 0;
+    left: -25px;
+  }
+  .quality__card {
+    padding: 20px 27px;
+  }
+  .quality__card-title {
+    font-size: 17px;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  .quality__card-text {
+    font-size: 15px;
+  }
+
+
+  .products__intro {
+    font-size: 15px;
+    font-weight: 400;
+  }
+  .products__subtitle,
+  .products__list {
+    font-size: 15px;
+  }
+  .mission__text,
+  .mission__text p {
+    font-size: 15px;
+  }
+  .section-mission .section__title {
+    text-align: start;
+  }
+  .mission__text p:nth-child(2) {
+    margin-bottom: 15px;
+  }
+  .section-mission {
+    margin-bottom: 0;
+  }
+  .section-contacts {
+    background-image: none;
+  }
+  .section-quality .container {
+    padding: 0;
+  }
+  .section-quality .section__title,
+  .section-quality .quality__grid,
+  .section-quality .quality__intro {
+    padding: 0 21px;
+  }
+  .section-quality .quality__grid {
+    padding: 40px 21px;
+  }
+  .section-quality .section__title {
+    margin-bottom: 10px;
+  }
+  .section-quality .quality__intro {
+    margin-top: 0;
+  }
+  .section-contacts {
+    padding-top: 0;
+    padding-bottom: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-products {
+    background-image: none;
+    padding-bottom: 0;
+  }
+  .section-quality {
+    background-image: none;
+  }
+  .quality__grid {
+    background-image: url(../images/figma/question-stroke_m.webp);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .contacts__content {
+    gap: 20px;
+    margin-top: 0;
+  }
+  .contact__icon {
+    width: 27px;
+    height: 27px;
+  }
+  .contact__text {
+    font-size: 17px;
+  }
+  .section-mission {
+    padding-bottom: 0;
+  }
+  .section-mission::after {
+    content: '';
+    display: block;
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 460px) {
+  .section-service {
+    overflow: hidden;
+  }
+  .section-service::after {
+    content: url(../images/figma/client_stroke_x2_m.webp);
+    display: inline-block;
+    margin-top: 30px;
+  }
+
+  .section-products::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 200px;
+    background-image: url(../images/figma/products_stroke_m.webp);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .section-mission::after {
+    content: url(../images/figma/mission_stroke_m.webp);
+  }
+}

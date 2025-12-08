@@ -1,4 +1,26 @@
-<!-- Footer -->
+  <!-- Footer -->
 <footer class="footer">
+<div class="footer__background">
+    <img src="/assets/images/figma/footer-logo.webp" alt="Новирел" class="footer__logo-bg">
+</div>
+<div class="container">
+    <div class="footer__content">
+        <div class="footer__left">
+            <p class="footer__company">{{i18n.information.name}}</p>
+            <p class="footer__details">{{i18n.information.inn}}</p>
+            <p class="footer__details">{{i18n.information.ogrn}}</p>
+        </div>
+        <div class="footer__right">
+            <p class="footer__link">{{i18n.footer.copyright}}</p>
+            <nav class="footer__nav">
+                <a href="#about" class="footer__link">{{i18n.navigation.about}}</a>
+                <a href="#quality" class="footer__link">{{i18n.navigation.quality}}</a>
+                <a href="#products" class="footer__link">{{i18n.navigation.products}}</a>
+                <a href="#contacts" class="footer__link">{{i18n.navigation.contact}}</a>
+            </nav>
+            <div class="footer__lang lang-select"><span data-lang="ru">{{i18n.localeRu}} </span>/ <span data-lang="en">{{i18n.localeEn}}</span></div>
+        </div>
+    </div>
+</div>
 </footer>
 <script src='/assets/scripts/index.js?v={{timestamp}}' type="module"></script>

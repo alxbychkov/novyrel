@@ -1,0 +1,138 @@
+/* Footer */
+.footer {
+  background: #aed19a;
+  padding: 75px 20px 130px;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer__background {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 75px;
+  position: relative;
+  z-index: 1;
+}
+
+.footer__logo-bg {
+  width: 100%;
+  height: 100%;
+  max-width: 1224px;
+  margin: 0 auto;
+}
+
+.footer__content {
+  max-width: 1224px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.footer__company {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  color: #000;
+}
+
+.footer__details {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  color: #000;
+}
+
+.footer__right {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.footer__nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer__link {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: #222220;
+  text-decoration: none;
+  letter-spacing: 0.17px;
+  transition: opacity 0.3s;
+}
+
+.footer__link:hover {
+  opacity: 0.8;
+}
+
+.footer__lang {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #222220;
+  letter-spacing: 0.16px;
+}
+
+.footer__lang span {
+  cursor: pointer;
+}
+
+.footer::after {
+  content: url(../images/figma/footer-stroke.webp);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+/* Responsive Design */
+@media (min-width: 1920px) {
+  .footer::after {
+    content: url(../images/figma/footer-stroke_x2.webp);
+  }
+}
+
+@media (max-width: 1200px) {
+  .footer__content {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .footer__nav {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 991px) {
+  .footer {
+    padding: 35px 28px 65px;
+  }
+  .footer .container {
+    padding: 0 20px;
+  }
+  .footer__company,
+  .footer__details {
+    font-size: 12px;
+    line-height: 150%;
+  }
+  .footer__link {
+    font-size: 9px;
+    line-height: 1;
+  }
+  .footer__nav,
+  .footer__lang {
+    display: none;
+  }
+  .footer::after {
+    content: none;
+  }
+}

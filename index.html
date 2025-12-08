@@ -1,35 +1,148 @@
 <!DOCTYPE html>
-<html lang="{{lang}}">
-
+<html lang="ru">
 {{> head}}
 
-<body class="lang-{{lang}}">
+<body>
   {{> header}}
-  
-  <main class="main">
-    <!-- Intro Section -->
-    <section class="section section-intro"></section>
 
-    <!-- Service Section -->
-    <section class="section section-service" id="service">
-    </section>
+  <!-- Hero Section -->
+  <section class="hero" id="about">
+    <div class="hero__background">
+      <picture>
+        <source media="(min-width: 768px)" srcset="/assets/images/figma/hero-bg_x2.webp">
+        <img src="/assets/images/figma/hero-bg_m.webp" alt="Hero bg">
+      </picture>
+    </div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <div class="hero__text-block hero__text-block--green">
+        <div class="hero__logo">
+          <img src="assets/images/figma/hero-logo.svg" alt="Новирел">
+        </div>
+        <h1 class="hero__title">{{i18n.intro.title}}</h1>
+      </div>
+      <div class="hero__text-block hero__text-block--gray">
+        <p class="hero__description">{{i18n.intro.subtitle}}</p>
+        {{> button}}
+      </div>
+    </div>
+  </section>
 
-    <!-- Question Section -->
-    <section class="section section-question" id="question">
-    </section>
+  <!-- Client Service Section -->
+  <section class="section section-service" id="service">
+    <div class="container">
+      <div class="section__content">
+        <div class="section__left">
+          <h2 class="section__title">{{i18n.service.title}}</h2>
+          <div class="service__items">
+            {{#each i18n.service.list}}
+            <div class="service__item">
+              <span class="service__number">{{#if @first}}1{{else}}{{#if (eq @index 1)}}2{{else}}{{#if (eq @index
+                2)}}3{{else}}4{{/if}}{{/if}}{{/if}}</span>
+              <p class="service__text">{{#if this.heading}}<strong>{{this.heading}}</strong> {{/if}}{{this.text}}</p>
+            </div>
+            {{/each}}
+          </div>
+        </div>
+        <div class="section__right">
+          <picture class="service__image">
+            <source media="(min-width: 460px)" srcset="/assets/images/figma/office.webp">
+            <img src="/assets/images/figma/office_m.webp" alt="Office">
+          </picture>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Products Section -->
-    <section class="section section-products" id="products">
-    </section>
+  <!-- Quality Section -->
+  <section class="section section-quality" id="quality">
+    <div class="container">
+      <h2 class="section__title">{{i18n.questions.title}}</h2>
 
-    <!-- Mission Section -->
-    <section class="section section-mission" id="mission">
-    </section>
+      <div class="quality__grid">
+        {{#each i18n.questions.list}}
+        <div class="quality__card {{#if this.title}}quality__card--green{{else}}quality__card--white{{/if}}">
+          {{#if this.title}}
+          <h3 class="quality__card-title">{{this.title}}</h3>
+          {{/if}}
+          <p class="quality__card-text">{{this.text}}</p>
+          {{#unless this.title}}
 
-    <!-- Contacts Section -->
-    <section class="section section-contacts" id="contacts">
-    </section>
-  </main>
+          {{> button}}
+
+          {{/unless}}
+        </div>
+        {{/each}}
+      </div>
+
+      <p class="quality__intro">{{i18n.questions.description}}</p>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="section section-products" id="products">
+    <div class="container">
+      <h2 class="section__title">{{i18n.products.title}}</h2>
+      <div class="section__content">
+        <div class="section__left">
+          <picture class="products__image">
+            <source media="(min-width: 460px)" srcset="/assets/images/figma/pills.webp">
+            <img src="/assets/images/figma/pills_m.webp" alt="Pills">
+          </picture>
+        </div>
+        <div class="section__right">
+          <h2 class="section__title">{{i18n.products.title}}</h2>
+          <p class="products__intro">{{i18n.products.heading}}</p>
+          <h3 class="products__subtitle">{{i18n.products.subtitle}}</h3>
+          <ul class="products__list">
+            {{#each i18n.products.list}}
+            <li>{{this}}</li>
+            {{/each}}
+          </ul>
+
+          {{> button}}
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission Section -->
+  <section class="section section-mission" id="mission">
+    <div class="container">
+      <div class="mission__content">
+        <div class="mission__column">
+          <h2 class="section__title">{{i18n.mission.title1}}</h2>
+          <div class="mission__text">
+            <p>{{i18n.mission.text1.[0]}}</p>
+            <p><strong>{{i18n.mission.text1.[1]}}</strong></p>
+            <p>{{i18n.mission.text1.[2]}}</p>
+          </div>
+        </div>
+        <div class="mission__column">
+          <h2 class="section__title">{{i18n.mission.title2}}</h2>
+          <p class="mission__text">{{i18n.mission.text2.[0]}}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacts Section -->
+  <section class="section section-contacts" id="contacts">
+    <div class="container">
+      <h2 class="section__title section__title--center">{{i18n.contacts.title}}</h2>
+      <div class="contacts__content">
+        <div class="contact__item">
+          <div class="contact__icon phone__icon"></div>
+          <a href="tel:{{i18n.contacts.phone}}" class="contact__text">{{i18n.contacts.phoneFormated}}</a>
+        </div>
+        <div class="contact__item">
+          <div class="contact__icon mail__icon"></div>
+          <a href="mailto:{{i18n.contacts.email}}" class="contact__text">{{i18n.contacts.email}}</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
   {{> footer}}
 </body>

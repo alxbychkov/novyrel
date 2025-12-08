@@ -1,38 +1,26 @@
-<!-- Header -->
+<!-- Header Navigation -->
 <header class="header">
-  <div class="header__logo">
-    {{#if (eq lang 'ru')}}
-      <a href="/">
-    {{else}}
-      <a href="/en/">
-    {{/if}}
-    </a>
+  <div class="header-wrapper">
+    <div class="header__content header__left">
+      <div class="header__logo">
+        <source media="(min-width: 1024px)" srcset="/assets/images/figma/header-logo.svg">
+        <img src="/assets/images/figma/header-logo_m.svg" alt="Header logo">
+      </div>
+      <nav class="header__nav">
+        <a href="#about" class="nav__link">{{i18n.navigation.about}}</a>
+        <a href="#quality" class="nav__link">{{i18n.navigation.quality}}</a>
+        <a href="#products" class="nav__link">{{i18n.navigation.products}}</a>
+        <a href="#contacts" class="nav__link">{{i18n.navigation.contact}}</a>
+      </nav>
+    </div>
+    <div class="header__content header__right">
+      <div class="header__lang lang-select">
+        <span data-lang="ru">{{i18n.localeRu}}</span> / <span data-lang="en">{{i18n.localeEn}}</span></div>
+        <div class="header__burger">
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </div>
+      </div>
   </div>
-  <button class="header__burger" aria-label="Open menu">
-    <span class="burger__line"></span>
-    <span class="burger__line"></span>
-    <span class="burger__line"></span>
-  </button>
-  <nav class="header__nav">
-    <a href="#about" class="nav__link">{{i18n.navigation.about}}</a>
-    <a href="#quality" class="nav__link">{{i18n.navigation.quality}}</a>
-    <a href="#products" class="nav__link">{{i18n.navigation.products}}</a>
-    <a href="#contacts" class="nav__link">{{i18n.navigation.contact}}</a>
-    <div class="nav__lang-select" tabindex="0">
-      {{#if (eq lang 'ru')}}
-        <span class="nav__lang-label">{{i18n.localeRu}}</span>
-      {{else}}
-        <span class="nav__lang-label">{{i18n.localeEn}}</span>
-      {{/if}}
-      <span class="nav__lang-arrow">&#9662;</span>
-      <div class="nav__lang-dropdown">
-        <div class="nav__lang-option" data-lang="ru">
-          <span>{{i18n.localeRu}}</span>
-        </div>
-        <div class="nav__lang-option" data-lang="en">
-          <span>{{i18n.localeEn}}</span>
-        </div>
-      </div>
-      </div>
-    </nav>
-</header> 
+</header>
