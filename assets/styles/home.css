@@ -98,6 +98,8 @@
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .quality__grid {
@@ -397,7 +399,7 @@
     left: -25px;
   }
   .quality__card {
-    padding: 20px 27px;
+    padding: 20px 27px 28px;
   }
   .quality__card-title {
     font-size: 17px;
@@ -489,6 +491,18 @@
   }
   .contact__item {
     max-width: 210px;
+  }
+  .quality__card-title {
+    white-space: nowrap;
+  }
+  .quality__card:last-child .quality__card-text {
+    font-weight: 600;
+  }
+  .section-quality .quality__intro {
+    padding: 0 35px;
+  }
+  .section-quality .quality__intro span:last-child {
+    font-weight: 400;
   }
 }
 

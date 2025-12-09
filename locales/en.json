@@ -72,7 +72,7 @@
                 "text": "Contact us to discuss how we can help you get the medicines you need."
             }
         ],
-        "description": "The company has a valid license for pharmaceutical activities issued by Roszdravnadzor. Upon request, we will send a confirming certificate."
+        "description": ["The company has a valid license for pharmaceutical activities issued by Roszdravnadzor.", "Upon request, we will send a confirming certificate."]
     },
     "products": {
         "title": "Supplied Products",

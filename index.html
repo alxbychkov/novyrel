@@ -94,7 +94,7 @@
         {{/each}}
       </div>
 
-      <p class="quality__intro">{{i18n.questions.description}}</p>
+      <p class="quality__intro">{{#each i18n.questions.description}}<span>{{this}}</span>{{/each}}</p>
     </div>
   </section>
 
