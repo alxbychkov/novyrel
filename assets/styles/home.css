@@ -442,7 +442,7 @@
     padding: 0 21px;
   }
   .section-quality .quality__grid {
-    padding: 50px 21px;
+    padding: 40px 21px;
   }
   .section-quality .section__title {
     margin-bottom: 10px;
@@ -467,7 +467,7 @@
   .quality__grid {
     background-image: url(../images/figma/question-stroke_m.webp);
     background-position: bottom;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
   }
   .contacts__content {
