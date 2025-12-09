@@ -21,6 +21,9 @@
     },
     "intro": {
         "title": "Specialized company for wholesale supply of pharmaceutical products, ensuring delivery of medicines and medical devices to pharmacies and distribution networks throughout Russia and CIS countries",
+        "title_m": [
+            "Novyrel - specialized company for wholesale supply of pharmaceutical products, ensuring delivery of medicines and medical devices to pharmacies and distribution networks throughout Russia and CIS countries"
+        ],
         "subtitle": "We work with products in the fields of ophthalmology, gastroenterology, oncology, rheumatology, nephrology, hemophilia and neurology."
     },
     "service": {
@@ -45,7 +48,12 @@
         ]
     },
     "questions": {
-        "title": "Reliable partner in ensuring product safety and quality",
+        "title": [
+            "Reliable partner in ensuring product safety and quality"
+        ],
+        "title_m": [
+            "Reliable partner in ensuring product safety and quality"
+        ],
         "list": [
             {
                 "title": "Guaranteed quality.",

@@ -109,6 +109,10 @@ h6 {
   flex: 1;
 }
 
+.mob-title {
+  display: none !important;
+}
+
 /* Responsive Design */
 @media (max-width: 1390px) {
   .container {
@@ -141,5 +145,15 @@ h6 {
     font-size: 14px;
     width: 150px;
     justify-content: flex-start;
+  }
+}
+
+@media (max-width: 561px) {
+  .desk-title {
+    display: none !important;
+  }
+  .mob-title {
+    display: flex !important;
+    flex-direction: column;
   }
 }

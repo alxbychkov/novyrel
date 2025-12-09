@@ -72,13 +72,15 @@
   background: #fff;
   padding: 150px 0;
   background-image: url(../images/figma/question-stroke.webp);
-  background-position: center;
+  background-position: 50% 85%;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .section-quality .section__title {
   max-width: 900px;
+  display: flex;
+  flex-direction: column;
 }
 
 .section-quality .btn {
@@ -462,7 +464,7 @@
   }
   .quality__grid {
     background-image: url(../images/figma/question-stroke_m.webp);
-    background-position: top;
+    background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
   }

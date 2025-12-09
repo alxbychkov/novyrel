@@ -19,7 +19,12 @@
         <div class="hero__logo">
           <img src="assets/images/figma/hero-logo.svg" alt="Новирел">
         </div>
-        <h1 class="hero__title">{{i18n.intro.title}}</h1>
+        <h1 class="hero__title desk-title">{{i18n.intro.title}}</h1>
+        <h1 class="hero__title mob-title">
+          {{#each i18n.intro.title_m}}
+            <span>{{this}}</span>
+          {{/each}}
+        </h1>
       </div>
       <div class="hero__text-block hero__text-block--gray">
         <p class="hero__description">{{i18n.intro.subtitle}}</p>
@@ -61,7 +66,8 @@
   <!-- Quality Section -->
   <section class="section section-quality" id="quality">
     <div class="container">
-      <h2 class="section__title">{{i18n.questions.title}}</h2>
+      <h2 class="section__title desk-title"><span>{{i18n.questions.title.[0]}}</span><span>{{i18n.questions.title.[1]}}</span></h2>
+      <h2 class="section__title mob-title"><span>{{i18n.questions.title.[0]}}</span><span>{{i18n.questions.title.[1]}}</span></h2>
 
       <div class="quality__grid">
         {{#each i18n.questions.list}}

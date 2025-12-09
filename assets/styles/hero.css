@@ -188,4 +188,9 @@
     object-position: center;
     height: auto;
   }
+
+  .hero__description {
+    max-width: 287px;
+  }
 }
+
