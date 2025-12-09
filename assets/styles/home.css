@@ -49,7 +49,7 @@
   font-weight: 600;
 }
 
-.service__text span {
+.service__item:first-child .service__text span {
   display: block;
 }
 
@@ -442,7 +442,7 @@
     padding: 0 21px;
   }
   .section-quality .quality__grid {
-    padding: 40px 21px;
+    padding: 45px 21px;
   }
   .section-quality .section__title {
     margin-bottom: 10px;
@@ -503,6 +503,9 @@
   }
   .section-quality .quality__intro span:last-child {
     font-weight: 400;
+  }
+  .service__item .service__text span {
+    display: block;
   }
 }
 
