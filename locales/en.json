@@ -3,14 +3,14 @@
     "localeRu": "Ru",
     "localeEn": "Eng",
     "navigation": {
-        "about": "About Us",
+        "about": "About us",
         "quality": "Quality",
         "products": "Products",
         "contact": "Contacts"
     },
     "information": {
         "name": "Novyrel LLC",
-        "inn": "TIN 7733477245",
+        "inn": "INN 7733477245",
         "ogrn": "OGRN 1257700483380"
     },
     "footer": {
@@ -20,9 +20,15 @@
         "contacts": "Contacts"
     },
     "intro": {
-        "title": "Specialized company for wholesale supply of pharmaceutical products, ensuring delivery of medicines and medical devices to pharmacies and distribution networks throughout Russia and CIS countries",
+        "title": "A specialized pharmaceutical wholesale company that delivers medicines and medical devices to pharmacies and distribution networks throughout Russia and the CIS countries",
         "title_m": [
-            "Novyrel - specialized company for wholesale supply of pharmaceutical products, ensuring delivery of medicines and medical devices to pharmacies and distribution networks throughout Russia and CIS countries"
+            "Novyrel is a specialized",
+            "pharmaceutical wholesale",
+            "company that delivers",
+            "medicines and medical devices",
+            "to pharmacies and distribution",
+            "networks throughout Russia and",
+            "the CIS countries"
         ],
         "subtitle": "We work with products in the fields of ophthalmology, gastroenterology, oncology, rheumatology, nephrology, hemophilia and neurology."
     },
@@ -30,71 +36,91 @@
         "title": "our advantage",
         "list": [
             {
-                "heading": "We form a targeted range of pharmaceutical products in demand specifically in specialized areas of medicine.",
-                "text": "Instead of an extensive catalog, we ensure the supply of those drugs that are really necessary for certain therapeutic areas and have high clinical significance."
+                "heading": "We create a targeted range of pharmaceutical products that are in demand specifically in specialized fields of medicine.",
+                "text": "",
+                "paragraph": "Instead of an extensive catalog, we provide supplies of those drugs that are really necessary for certain therapeutic areas and have high clinical significance."
             },
             {
-                "heading": "Cooperation only with verified manufacturers and suppliers",
-                "text": "allows us to ensure prompt and reliable delivery of necessary medicines."
+                "heading": "Cooperation only with trusted manufacturers and suppliers",
+                "text": "allows us to ensure prompt and reliable delivery of the necessary medicines.",
+                "paragraph": ""
             },
             {
-                "heading": "Each client is assigned a personal manager who promptly resolves work issues and helps build an uninterrupted procurement process.",
-                "text": "This format of cooperation builds trust and contributes to stable, long-term partnerships."
+                "heading": "Each client is assigned a personal manager who promptly solves work issues and helps to build an uninterrupted procurement process.",
+                "text": "",
+                "paragraph": "This format of cooperation builds trust and promotes sustainable, long-term partnerships."
             },
             {
-                "heading": "Clients throughout Russia and CIS countries value our reliability, efficiency and convenience of interaction.",
-                "text": ""
+                "heading": "Customers all over Russia and the CIS countries appreciate our reliability, efficiency and ease of interaction.",
+                "text": "",
+                "paragraph": ""
             }
         ]
     },
     "questions": {
         "title": [
-            "Reliable partner in ensuring product safety and quality"
+            "A reliable partner in ensuring",
+            "product safety and quality"
         ],
         "title_m": [
-            "Reliable partner in ensuring product safety and quality"
+            "A reliable partner",
+            "in ensuring product",
+            "safety and quality"
         ],
         "list": [
             {
                 "title": "Guaranteed quality.",
-                "text": "For us, the priority is the safety and quality of supplied drugs — more important than speed and commercial benefit. We work only with verified manufacturers and comply with strict control standards."
+                "text": "For us, the safety and quality of the supplied drugs are a priority — speed and commercial benefits are more important. We only work with trusted manufacturers and adhere to strict control standards."
             },
             {
                 "title": "Supply stability.",
-                "text": "The supply process is controlled by our specialists at every stage — from product preparation to its transfer to the client. This approach guarantees reliability and safety throughout the entire logistics path."
+                "text": "The delivery process is monitored by our specialists at every stage — from product preparation to its delivery to the customer. This approach guarantees reliability and safety along the entire logistics route."
             },
             {
-                "title": "Honest terms of cooperation.",
-                "text": "We adhere to transparent and respectful working conditions, ensuring predictability, correctness and equally high level of service for our partners."
+                "title": "Fair terms of cooperation.",
+                "text": "We adhere to transparent and respectful working conditions, providing partners with predictability, correctness and an equally high level of service."
             },
             {
                 "title": "",
                 "text": "Contact us to discuss how we can help you get the medicines you need."
             }
         ],
-        "description": ["The company has a valid license for pharmaceutical activities issued by Roszdravnadzor.", "Upon request, we will send a confirming certificate."]
+        "description": [
+            "The company has a valid pharmaceutical license issued by Roszdravnadzor.",
+            "Upon request, we will send you a confirmation certificate."
+        ],
+        "description_m": [
+            "The company has a valid pharmaceutical",
+            "license issued by Roszdravnadzor.",
+            "Upon request, we will send you a",
+            "confirmation certificate."
+        ]
     },
     "products": {
         "title": "Supplied Products",
-        "heading": "In addition to competitive and transparent prices, one of the key advantages of Novyrel is the constant availability of necessary products",
-        "subtitle": "The range of supplied products includes:",
+        "title_m": [
+            "Supplied",
+            "Products"
+        ],
+        "heading": "In addition to competitive and transparent prices, one of the key advantages of Novirel is the constant availability of the necessary products.",
+        "subtitle": "The range of products supplied includes:",
         "list": [
             "registered medicines;",
             "imported unregistered medicines supplied to Russia and CIS countries for vital indications for specific patients;",
-            "vitamins, dietary supplements and other food additives;",
-            "as well as other items available upon request."
+            "vitamins, biologically active additives and other food additives;",
+            "as well as other positions available on request."
         ]
     },
     "mission": {
         "title1": "Our Philosophy",
         "title2": "Our Mission",
         "text1": [
-            "At Novyrel, we work daily with full dedication, striving to ensure maximum satisfaction of our clients' needs.",
-            "Our philosophy is based on honesty, commitment to innovation and results orientation.",
-            "We are confident: the best indicator of our work is the trust and comfort of our partners, forming strong and long-term relationships."
+            "At Novirel, we work with full dedication every day, striving to ensure maximum satisfaction of our customers' needs.",
+            "Our philosophy is based on honesty, commitment to innovation and result orientation.",
+            "We are confident that the best indicator of our work is the trust and comfort of our partners, which form strong and long—term relationships."
         ],
         "text2": [
-            "Our mission is to simplify the path of medicines from manufacturer to patient, providing the medical community with effective solutions based on transparency, quality and responsible approach."
+            "Our mission is to simplify the path of medicines from the manufacturer to the patient by providing the medical community with effective solutions based on transparency, quality and a responsible approach."
         ]
     },
     "contacts": {

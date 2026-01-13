@@ -63,6 +63,10 @@
   padding: 75px 97px;
 }
 
+.lang-en .hero__text-block {
+  padding: 75px 48px 75px 97px;
+}
+
 .hero__text-block--green {
   background: #aed19a;
   width: 100%;
@@ -137,7 +141,8 @@
   .hero__logo {
     display: none;
   }
-  .hero__text-block {
+  .hero__text-block,
+  .lang-en .hero__text-block {
     padding: 30px;
   }
 

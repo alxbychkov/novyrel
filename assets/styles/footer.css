@@ -63,11 +63,15 @@
 .footer__link {
   font-family: 'Open Sans', sans-serif;
   font-size: 17px;
-  font-weight: 600;
+  font-weight: 400;
   color: #222220;
   text-decoration: none;
   letter-spacing: 0.17px;
   transition: opacity 0.3s;
+}
+
+.footer__nav .footer__link {
+  font-weight: 600;
 }
 
 .footer__link:hover {

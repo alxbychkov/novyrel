@@ -141,6 +141,10 @@
   color: #222220;
 }
 
+.quality__card:last-child .quality__card-text {
+  font-weight: 600;
+}
+
 /* Products Section */
 .section-products {
   background: #fff;
@@ -495,13 +499,10 @@
   .quality__card-title {
     white-space: nowrap;
   }
-  .quality__card:last-child .quality__card-text {
-    font-weight: 600;
-  }
   .section-quality .quality__intro {
     padding: 0 35px;
   }
-  .section-quality .quality__intro span:last-child {
+  .section-quality .quality__intro span:nth-last-child(-n + 2) {
     font-weight: 400;
   }
   .service__item .service__text span {

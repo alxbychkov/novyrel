@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
   options.forEach((option) => {
     option.addEventListener('click', function (e) {
       e.stopPropagation();
-      return false;
+      // return false;
       const lang = option.getAttribute('data-lang');
 
       // Redirect to appropriate language version
