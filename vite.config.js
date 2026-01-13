@@ -13,7 +13,7 @@ export default defineConfig(({ mode }) => {
   const outDir = lang === 'en' ? 'dist/en' : 'dist';
   const base = process.env.NODE_ENV === 'production' ? '/' : '/novyrel/';
   const isProduction = process.env.NODE_ENV === 'production';
-  
+
   // Cache busting timestamp
   const timestamp = Date.now();
 
@@ -31,7 +31,7 @@ export default defineConfig(({ mode }) => {
       emptyOutDir: lang !== 'en',
       rollupOptions: {
         input: {
-          main: resolve(__dirname, 'index.html')
+          main: resolve(__dirname, 'index.html'),
         },
         output: {
           chunkFileNames: 'js/[name].js',
@@ -43,7 +43,9 @@ export default defineConfig(({ mode }) => {
             if (/\.(css)$/.test(assetInfo.name)) {
               return `css/[name].${ext}`;
             }
-            if (/\.(png|jpe?g|svg|gif|tiff|bmp|ico|webp)$/i.test(assetInfo.name)) {
+            if (
+              /\.(png|jpe?g|svg|gif|tiff|bmp|ico|webp)$/i.test(assetInfo.name)
+            ) {
               return `images/[name].${ext}`;
             }
             return `[name].${ext}`;
@@ -113,18 +115,36 @@ export default defineConfig(({ mode }) => {
       imagetools(),
       imagePresets({
         presets: {
-          default: { formats: ['webp', 'jpeg'], widths: [400, 800, 1200], sizes: '100vw', loading: 'lazy' },
-          avatar: { formats: ['webp'], widths: [100, 200], sizes: '(max-width: 600px) 100px, 200px', loading: 'lazy' },
+          default: {
+            formats: ['webp', 'jpeg'],
+            widths: [400, 800, 1200],
+            sizes: '100vw',
+            loading: 'lazy',
+          },
+          avatar: {
+            formats: ['webp'],
+            widths: [100, 200],
+            sizes: '(max-width: 600px) 100px, 200px',
+            loading: 'lazy',
+          },
         },
       }),
-      // Плагин для очистки папки /de после сборки
       {
-        name: 'clean-de-folder',
+        name: 'add-timestamp-to-assets',
+        transformIndexHtml(html) {
+          return html
+            .replace(/src="([^"]+\.js)"/g, `src="$1?v=${timestamp}"`)
+            .replace(/href="([^"]+\.css)"/g, `href="$1?v=${timestamp}"`);
+        },
+      },
+      // Плагин для очистки папки /en после сборки
+      {
+        name: 'clean-en-folder',
         closeBundle() {
-          const deDir = resolve(__dirname, 'dist/de');
+          const deDir = resolve(__dirname, 'dist/en');
           if (fs.existsSync(deDir)) {
             const files = fs.readdirSync(deDir);
-            files.forEach(file => {
+            files.forEach((file) => {
               const filePath = path.join(deDir, file);
               const stat = fs.statSync(filePath);
               if (stat.isFile() && !file.endsWith('.html')) {
