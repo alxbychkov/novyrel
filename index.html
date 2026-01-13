@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="{{lang}}">
 {{> head}}
 
-<body>
+<body class="lang-{{lang}}">
   {{> header}}
 
   <!-- Hero Section -->
@@ -19,7 +19,12 @@
         <div class="hero__logo">
           <img src="assets/images/figma/hero-logo.svg" alt="Новирел">
         </div>
-        <h1 class="hero__title">{{i18n.intro.title}}</h1>
+        <h1 class="hero__title desk-title">{{i18n.intro.title}}</h1>
+        <h1 class="hero__title mob-title">
+          {{#each i18n.intro.title_m}}
+          <span>{{this}}</span>
+          {{/each}}
+        </h1>
       </div>
       <div class="hero__text-block hero__text-block--gray">
         <p class="hero__description">{{i18n.intro.subtitle}}</p>
@@ -39,7 +44,11 @@
             <div class="service__item">
               <span class="service__number">{{#if @first}}1{{else}}{{#if (eq @index 1)}}2{{else}}{{#if (eq @index
                 2)}}3{{else}}4{{/if}}{{/if}}{{/if}}</span>
-              <p class="service__text">{{#if this.heading}}<strong>{{this.heading}}</strong> {{/if}}{{this.text}}</p>
+              <p class="service__text">
+                {{#if this.heading}}<strong>{{this.heading}}</strong> {{/if}}
+                {{#if this.paragraph}}<span>{{this.paragraph}}</span> {{/if}}
+                {{this.text}}
+              </p>
             </div>
             {{/each}}
           </div>
@@ -57,7 +66,13 @@
   <!-- Quality Section -->
   <section class="section section-quality" id="quality">
     <div class="container">
-      <h2 class="section__title">{{i18n.questions.title}}</h2>
+      <h2 class="section__title desk-title">
+        <span>{{i18n.questions.title.[0]}}</span><span>{{i18n.questions.title.[1]}}</span></h2>
+      <h2 class="section__title mob-title">
+        {{#each i18n.questions.title_m}}
+          <span>{{this}}</span>
+        {{/each}}
+      </h2>
 
       <div class="quality__grid">
         {{#each i18n.questions.list}}
@@ -84,7 +99,8 @@
         {{/each}}
       </div>
 
-      <p class="quality__intro">{{i18n.questions.description}}</p>
+      <p class="quality__intro desk-title">{{#each i18n.questions.description}}<span>{{this}}</span>{{/each}}</p>
+      <p class="quality__intro mob-title">{{#each i18n.questions.description_m}}<span>{{this}}</span>{{/each}}</p>
     </div>
   </section>
 

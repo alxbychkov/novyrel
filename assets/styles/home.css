@@ -49,6 +49,10 @@
   font-weight: 600;
 }
 
+.service__item:first-child .service__text span {
+  display: block;
+}
+
 .service__image {
   display: flex;
   justify-content: flex-start;
@@ -68,13 +72,15 @@
   background: #fff;
   padding: 150px 0;
   background-image: url(../images/figma/question-stroke.webp);
-  background-position: center;
+  background-position: 50% 85%;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .section-quality .section__title {
   max-width: 900px;
+  display: flex;
+  flex-direction: column;
 }
 
 .section-quality .btn {
@@ -92,6 +98,8 @@
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .quality__grid {
@@ -131,6 +139,10 @@
   font-size: 19px;
   line-height: 1.5;
   color: #222220;
+}
+
+.quality__card:last-child .quality__card-text {
+  font-weight: 600;
 }
 
 /* Products Section */
@@ -358,6 +370,10 @@
   .products__image img {
     border-radius: 0;
   }
+  .contact__item {
+    width: 100%;
+    max-width: 275px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -387,7 +403,7 @@
     left: -25px;
   }
   .quality__card {
-    padding: 20px 27px;
+    padding: 20px 27px 28px;
   }
   .quality__card-title {
     font-size: 17px;
@@ -397,8 +413,6 @@
   .quality__card-text {
     font-size: 15px;
   }
-
-
   .products__intro {
     font-size: 15px;
     font-weight: 400;
@@ -438,7 +452,7 @@
     margin-bottom: 10px;
   }
   .section-quality .quality__intro {
-    margin-top: 0;
+    margin-top: 25px;
   }
   .section-contacts {
     padding-top: 0;
@@ -456,8 +470,8 @@
   }
   .quality__grid {
     background-image: url(../images/figma/question-stroke_m.webp);
-    background-position: top;
-    background-size: cover;
+    background-position: bottom;
+    background-size: contain;
     background-repeat: no-repeat;
   }
   .contacts__content {
@@ -479,9 +493,28 @@
     display: block;
     margin-top: 50px;
   }
+  .contact__item {
+    max-width: 210px;
+  }
+  .quality__card-title {
+    white-space: nowrap;
+  }
+  .section-quality .quality__intro {
+    padding: 0 35px;
+  }
+  .section-quality .quality__intro span:nth-last-child(-n + 2) {
+    font-weight: 400;
+  }
+  .service__item .service__text span {
+    display: block;
+  }
 }
 
 @media (max-width: 460px) {
+  .service__image img {
+    opacity: 1;
+  }
+
   .section-service {
     overflow: hidden;
   }

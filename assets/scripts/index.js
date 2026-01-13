@@ -1,26 +1,28 @@
 document.addEventListener('DOMContentLoaded', function () {
   const burger = document.querySelector('.header__burger');
   const nav = document.querySelector('.header__nav');
-  
+
   if (burger && nav) {
-    burger.addEventListener('click', function() {
+    burger.addEventListener('click', function () {
       burger.classList.toggle('active');
       nav.classList.toggle('active');
-      document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
+      document.body.style.overflow = nav.classList.contains('active')
+        ? 'hidden'
+        : '';
     });
-    
+
     // Close menu when clicking on nav links
     const navLinks = nav.querySelectorAll('.nav__link');
-    navLinks.forEach(link => {
-      link.addEventListener('click', function() {
+    navLinks.forEach((link) => {
+      link.addEventListener('click', function () {
         burger.classList.remove('active');
         nav.classList.remove('active');
         document.body.style.overflow = '';
       });
     });
-    
+
     // Close menu on escape key
-    document.addEventListener('keydown', function(e) {
+    document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && nav.classList.contains('active')) {
         burger.classList.remove('active');
         nav.classList.remove('active');
@@ -29,11 +31,15 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Close menu when clicking outside (mobile)
-    document.addEventListener('click', function(e) {
+    document.addEventListener('click', function (e) {
       if (window.innerWidth > 1024) return;
       const clickInsideNav = nav.contains(e.target);
       const clickOnBurger = burger.contains(e.target);
-      if (!clickInsideNav && !clickOnBurger && nav.classList.contains('active')) {
+      if (
+        !clickInsideNav &&
+        !clickOnBurger &&
+        nav.classList.contains('active')
+      ) {
         burger.classList.remove('active');
         nav.classList.remove('active');
         document.body.style.overflow = '';
@@ -47,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   let options = [];
 
-  langSelect.forEach(s => {
+  langSelect.forEach((s) => {
     options = [...options, ...s.querySelectorAll('[data-lang]')];
   });
 
@@ -55,12 +61,15 @@ document.addEventListener('DOMContentLoaded', function () {
   options.forEach((option) => {
     option.addEventListener('click', function (e) {
       e.stopPropagation();
+      // return false;
       const lang = option.getAttribute('data-lang');
 
       // Redirect to appropriate language version
       const currentUrl = window.location.href;
       const origin = window.location.origin;
-      const base = window.location.pathname.includes('/novyrel/') ? '/novyrel' : '';
+      const base = window.location.pathname.includes('/novyrel/')
+        ? '/novyrel'
+        : '';
       const pathAfterOrigin = currentUrl.replace(origin + base, '');
 
       if (lang === 'en') {
