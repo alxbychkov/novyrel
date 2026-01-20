@@ -61,31 +61,27 @@ document.addEventListener('DOMContentLoaded', function () {
   options.forEach((option) => {
     option.addEventListener('click', function (e) {
       e.stopPropagation();
-      // return false;
       const lang = option.getAttribute('data-lang');
 
-      // Redirect to appropriate language version
-      const currentUrl = window.location.href;
-      const origin = window.location.origin;
-      const base = window.location.pathname.includes('/novyrel/')
-        ? '/novyrel'
-        : '';
-      const pathAfterOrigin = currentUrl.replace(origin + base, '');
+      // Get current domain and path
+      const currentDomain = window.location.origin;
+      const currentPath = window.location.pathname + window.location.search + window.location.hash;
 
+      // Determine target domain
+      let targetDomain;
       if (lang === 'en') {
-        // Add /en after origin
-        if (pathAfterOrigin.startsWith('/en')) {
-          // Already in English version, do nothing
-          return;
-        }
-        window.location.href = origin + base + '/en' + pathAfterOrigin;
-      } else {
-        // Remove /en from path
-        if (pathAfterOrigin.startsWith('/en')) {
-          const pathWithoutDe = pathAfterOrigin.replace('/en', '');
-          window.location.href = origin + base + pathWithoutDe;
-        }
+        targetDomain = 'https://novyrel.com';
+      } else if (lang === 'ru') {
+        targetDomain = 'https://novyrel.ru';
       }
+
+      // If already on the target domain, don't redirect
+      if (currentDomain === targetDomain) {
+        return;
+      }
+
+      // Redirect to target domain with same path
+      window.location.href = targetDomain + currentPath;
     });
   });
 });
