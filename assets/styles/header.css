@@ -6,7 +6,7 @@
   right: 0;
   z-index: 1000;
   background: transparent;
-  padding-top: 75px;
+  padding-top: 68px;
 }
 
 .header-wrapper {
@@ -58,6 +58,7 @@
   max-width: 200px;
   background: #f0f0f0;
   border-radius: 23px 0 0 23px;
+  padding: 30px 57px;
 }
 .header__logo {
   display: flex;
@@ -135,9 +136,15 @@
 /* Responsive Design */
 @media (max-width: 1390px) {
   .header__left {
-    padding: 12px 57px 6px 20px;
+    padding: 12px 47px 6px 20px;
   }
 }
+@media (max-width: 1100px) {
+  .header__nav {
+    gap: 20px;
+  }
+}
+
 @media (max-width: 1024px) {
   .header {
     backdrop-filter: unset;

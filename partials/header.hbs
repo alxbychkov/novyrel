@@ -3,8 +3,17 @@
   <div class="header-wrapper">
     <div class="header__content header__left">
       <div class="header__logo">
-        <source media="(min-width: 1024px)" srcset="/assets/images/figma/header-logo.svg">
-        <img src="/assets/images/figma/header-logo_m.svg" alt="Header logo">
+        {{#if (eq lang 'ru')}}
+          <picture>
+            <source media="(min-width: 1024px)" srcset="/assets/images/figma/header-logo_ru.svg">
+            <img src="/assets/images/figma/header-logo_m_ru.svg" alt="Header logo">
+          </picture>
+        {{else}}
+          <picture>
+            <source media="(min-width: 1024px)" srcset="/assets/images/figma/header-logo.svg">
+            <img src="/assets/images/figma/header-logo_m.svg" alt="Header logo">
+          </picture>
+        {{/if}}
       </div>
       <nav class="header__nav">
         <a href="#about" class="nav__link">{{i18n.navigation.about}}</a>

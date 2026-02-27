@@ -53,9 +53,17 @@
   left: 56px;
 }
 
+.lang-ru .hero__logo {
+  top: -95px;
+}
+
 .hero__logo img {
   height: 149px;
   width: auto;
+}
+
+.lang-ru .hero__logo img {
+  max-width: 610px;
 }
 
 .hero__text-block {
