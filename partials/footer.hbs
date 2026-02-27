@@ -1,7 +1,11 @@
   <!-- Footer -->
 <footer class="footer">
 <div class="footer__background">
-    <img src="/assets/images/figma/footer-logo.webp" alt="Новирел" class="footer__logo-bg">
+    {{#if (eq lang 'ru')}}
+      <img src="/assets/images/figma/footer-logo_ru.webp" alt="Новирел" class="footer__logo-bg">
+    {{else}}
+      <img src="/assets/images/figma/footer-logo.webp" alt="Novyrel" class="footer__logo-bg">
+    {{/if}}
 </div>
 <div class="container">
     <div class="footer__content">
